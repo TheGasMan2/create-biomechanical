@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "createmechanisedmenagerie:item/electron_battery"
+  }
+}
