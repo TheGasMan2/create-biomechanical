@@ -1,0 +1,28 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "key": {
+    "H": {
+      "item": "createmechanisedmenagerie:electron_battery"
+    },
+    "L": {
+      "item": "minecraft:iron_block"
+    },
+    "R": {
+      "item": "minecraft:iron_bars"
+    },
+    "S": {
+      "item": "minecraft:copper_block"
+    }
+  },
+  "pattern": [
+    "SLS",
+    "RHR",
+    "RHR",
+    "RHR",
+    "SLS"
+  ],
+  "result": {
+    "item": "createmechanisedmenagerie:power_core"
+  }
+}
