@@ -1,2 +1,2 @@
 "# create-mechanised-menagerie" 
-![icon](icon.png)
+![icon](.idea/icon.png)
