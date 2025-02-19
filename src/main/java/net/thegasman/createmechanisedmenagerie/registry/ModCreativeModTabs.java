@@ -22,6 +22,7 @@ public class ModCreativeModTabs {
                         pOutput.accept(CMMItems.ELECTRON_BATTERY);
                         pOutput.accept(CMMItems.INCOMPLETE_ELECTRON_BATTERY);
                         pOutput.accept(CMMBlocks.POWER_CORE);
+                        pOutput.accept(CMMBlocks.STATION);
                     })
                     .build());
 

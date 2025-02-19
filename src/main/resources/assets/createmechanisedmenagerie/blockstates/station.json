@@ -1,0 +1,44 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "createmechanisedmenagerie:block/station"
+    },
+    "facing=east": {
+      "model": "createmechanisedmenagerie:block/station",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "createmechanisedmenagerie:block/station",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "createmechanisedmenagerie:block/station",
+      "y": 270
+    }
+  },
+  "multipart": [
+    {
+      "apply": [
+        {
+          "condition": "{BlockEntityTag.Facing:north}",
+          "model": "createmechanisedmenagerie:block/station"
+        },
+        {
+          "condition": "{BlockEntityTag.Facing:east}",
+          "model": "createmechanisedmenagerie:block/station",
+          "y": 90
+        },
+        {
+          "condition": "{BlockEntityTag.Facing:south}",
+          "model": "createmechanisedmenagerie:block/station",
+          "y": 180
+        },
+        {
+          "condition": "{BlockEntityTag.Facing:west}",
+          "model": "createmechanisedmenagerie:block/station",
+          "y": 270
+        }
+      ]
+    }
+  ]
+}

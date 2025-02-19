@@ -2,9 +2,13 @@ package net.thegasman.createmechanisedmenagerie;
 
 import com.mojang.logging.LogUtils;
 import com.simibubi.create.foundation.data.CreateRegistrate;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.thegasman.createmechanisedmenagerie.block.station.item.StationItem;
 import net.thegasman.createmechanisedmenagerie.registry.ModCreativeModTabs;
 import net.thegasman.createmechanisedmenagerie.registry.CMMBlockEntityTypes;
 import net.thegasman.createmechanisedmenagerie.registry.CMMBlocks;
@@ -31,6 +35,4 @@ public class CreateMechanisedMenagerie {
 
         REGISTRATE.registerEventListeners(modEventBus);
     }
-
-
 }
