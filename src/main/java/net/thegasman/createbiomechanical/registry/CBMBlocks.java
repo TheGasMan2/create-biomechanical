@@ -1,5 +1,6 @@
 package net.thegasman.createbiomechanical.registry;
 
+import com.simibubi.create.content.kinetics.BlockStressDefaults;
 import com.simibubi.create.foundation.data.AssetLookup;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import com.tterrag.registrate.util.nullness.NonNullBiConsumer;
@@ -14,6 +15,7 @@ import net.thegasman.createbiomechanical.CreateBiomechanical;
 import net.thegasman.createbiomechanical.block.powercore.PowerCoreBlock;
 import net.thegasman.createbiomechanical.block.powercore.item.PowerCoreItem;
 import net.thegasman.createbiomechanical.block.station.StationBlock;
+import net.thegasman.createbiomechanical.block.station.StationBlockItem;
 
 import static net.thegasman.createbiomechanical.CreateBiomechanical.REGISTRATE;
 
@@ -31,11 +33,13 @@ public class CBMBlocks {
     // Block strength
     public static final BlockEntry<StationBlock> STATION = REGISTRATE
             .block("station", StationBlock::new)
+            .transform(BlockStressDefaults.setImpact(8.0))
             .initialProperties(() -> Blocks.IRON_BLOCK)
             .properties(BlockBehaviour.Properties::noOcclusion)
             .addLayer(() -> RenderType::cutoutMipped)
             .blockstate((c, p) -> p.horizontalBlock(c.getEntry(), AssetLookup.standardModel(c, p)))
-            .simpleItem()
+            .item(StationBlockItem::new)
+            .build()
             .register();
 
     public static void register() {

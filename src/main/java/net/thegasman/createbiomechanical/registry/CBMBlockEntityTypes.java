@@ -5,6 +5,7 @@ import net.thegasman.createbiomechanical.CreateBiomechanical;
 import net.thegasman.createbiomechanical.block.powercore.PowerCoreBlockEntity;
 import net.thegasman.createbiomechanical.block.powercore.PowerCoreRenderer;
 import net.thegasman.createbiomechanical.block.station.StationBlockEntity;
+import net.thegasman.createbiomechanical.block.station.StationBlockEntityRenderer;
 
 import static net.thegasman.createbiomechanical.CreateBiomechanical.REGISTRATE;
 
@@ -19,6 +20,7 @@ public class CBMBlockEntityTypes {
     public static final BlockEntityEntry<StationBlockEntity> STATION_ENTITY = REGISTRATE
             .blockEntity("station_entity", StationBlockEntity::new)
             .validBlocks(CBMBlocks.STATION)
+            .renderer(() -> StationBlockEntityRenderer::new)
             .register();
 
     public static void register() {

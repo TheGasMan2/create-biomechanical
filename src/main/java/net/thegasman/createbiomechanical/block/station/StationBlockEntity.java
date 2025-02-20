@@ -21,9 +21,8 @@ public class StationBlockEntity extends KineticBlockEntity {
     }
 
     public boolean isController() {
-        return getBlockState().getValue(StationBlock.SHAPE) == StationBlock.Shape.CENTER;
+        return getBlockState().getValue(StationBlock.SHAPE) == StationShape.BOTTOM_CENTER;
     }
-
 
     @Override
     public boolean addToGoggleTooltip(List<Component> tooltip, boolean isPlayerSneaking) {
