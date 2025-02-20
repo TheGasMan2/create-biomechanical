@@ -1,0 +1,9 @@
+{
+  "block.createbiomechanical.power_core": "Power Core",
+  "block.createbiomechanical.station": "Station",
+  "createbiomechanical.creativetab.create_biomechanical_tab": "Create: Biomechanical",
+  "entity.createbiomechanical.cogolem": "Cogolem",
+  "item.createbiomechanical.cogolem_spawn_egg": "Cogolem Spawn Egg",
+  "item.createbiomechanical.electron_battery": "Electron Battery",
+  "item.createbiomechanical.incomplete_electron_battery": "Incomplete Electron Battery"
+}
