@@ -1,9 +1,0 @@
-// 1.20.1	2025-02-17T12:52:15.2195475	Registrate Provider for createmechanisedmenagerie [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud)]
-66022a5ae828f60fc663050edf8a96120bd733e2 assets/createmechanisedmenagerie/lang/en_ud.json
-6c4aa8b6255594af68756e96e75fe50fcd4b061c assets/createmechanisedmenagerie/lang/en_us.json
-63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/createmechanisedmenagerie/models/item/cogolem_spawn_egg.json
-e516e96c43e09945e272c831841188b95d015878 assets/createmechanisedmenagerie/models/item/electron_battery.json
-562be6dd51f49462daded7b1e06b34f65bd2d0f3 assets/createmechanisedmenagerie/models/item/incomplete_electron_battery.json
-726ecce36fde85e8d053d87772d4d1713c3cab0c assets/createmechanisedmenagerie/models/item/power_core.json
-5dd991af3ed82d3a24d5e6d18db8571aef528649 data/createmechanisedmenagerie/loot_tables/blocks/power_core.json
-6677f442a556e5a25c8968e771d730180fcddfc6 data/createmechanisedmenagerie/loot_tables/entities/cogolem.json

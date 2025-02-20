@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=east,shape=center": {
+      "model": "createbiomechanical:block/station",
+      "y": 90
+    },
+    "facing=east,shape=empty": {
+      "model": "createbiomechanical:block/station",
+      "y": 90
+    },
+    "facing=east,shape=leftshaft": {
+      "model": "createbiomechanical:block/station",
+      "y": 90
+    },
+    "facing=east,shape=rightshaft": {
+      "model": "createbiomechanical:block/station",
+      "y": 90
+    },
+    "facing=north,shape=center": {
+      "model": "createbiomechanical:block/station"
+    },
+    "facing=north,shape=empty": {
+      "model": "createbiomechanical:block/station"
+    },
+    "facing=north,shape=leftshaft": {
+      "model": "createbiomechanical:block/station"
+    },
+    "facing=north,shape=rightshaft": {
+      "model": "createbiomechanical:block/station"
+    },
+    "facing=south,shape=center": {
+      "model": "createbiomechanical:block/station",
+      "y": 180
+    },
+    "facing=south,shape=empty": {
+      "model": "createbiomechanical:block/station",
+      "y": 180
+    },
+    "facing=south,shape=leftshaft": {
+      "model": "createbiomechanical:block/station",
+      "y": 180
+    },
+    "facing=south,shape=rightshaft": {
+      "model": "createbiomechanical:block/station",
+      "y": 180
+    },
+    "facing=west,shape=center": {
+      "model": "createbiomechanical:block/station",
+      "y": 270
+    },
+    "facing=west,shape=empty": {
+      "model": "createbiomechanical:block/station",
+      "y": 270
+    },
+    "facing=west,shape=leftshaft": {
+      "model": "createbiomechanical:block/station",
+      "y": 270
+    },
+    "facing=west,shape=rightshaft": {
+      "model": "createbiomechanical:block/station",
+      "y": 270
+    }
+  }
+}
