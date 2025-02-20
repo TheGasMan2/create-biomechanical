@@ -5,4 +5,4 @@ Harness the fusion of machinery and life with Create: Biomechanical. Build and b
 
 Future updates will expand functionality with new golems, station upgrades, and more biomechanical creations to revolutionize your Create mod experience!
 
-Join the discord for mor updates: https://discord.com/invite/Gz9SHZTGT7
+Join the discord for more updates: https://discord.com/invite/Gz9SHZTGT7
