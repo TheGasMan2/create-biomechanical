@@ -6,6 +6,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
+import javax.annotation.Nullable;
 import java.util.List;
 
 public class StationBlockEntity extends KineticBlockEntity {
@@ -27,6 +28,13 @@ public class StationBlockEntity extends KineticBlockEntity {
     @Override
     public boolean addToGoggleTooltip(List<Component> tooltip, boolean isPlayerSneaking) {
         return super.addToGoggleTooltip(tooltip, isPlayerSneaking);
+    }
+
+    @Nullable
+    public StationBlockEntity getController() {
+        if (isController())
+            return this;
+        return null;
     }
 }
 

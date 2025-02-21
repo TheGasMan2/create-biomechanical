@@ -39,6 +39,7 @@ public class CBMBlocks {
             .addLayer(() -> RenderType::cutoutMipped)
             .blockstate((c, p) -> p.horizontalBlock(c.getEntry(), AssetLookup.standardModel(c, p)))
             .item(StationBlockItem::new)
+            .model((c, p) -> p.withExistingParent(c.getName(), CreateBiomechanical.asResource("item/station_item")))
             .build()
             .register();
 

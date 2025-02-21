@@ -2,6 +2,7 @@ package net.thegasman.createbiomechanical;
 
 import com.mojang.logging.LogUtils;
 import com.simibubi.create.foundation.data.CreateRegistrate;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -26,5 +27,9 @@ public class CreateBiomechanical {
         CBMCreativeModTabs.register(modEventBus);
 
         REGISTRATE.registerEventListeners(modEventBus);
+    }
+
+    public static ResourceLocation asResource(String path) {
+        return new ResourceLocation(MODID, path);
     }
 }
