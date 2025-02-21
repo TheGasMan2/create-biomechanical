@@ -1,0 +1,30 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "key": {
+    "H": {
+      "item": "create:brass_ingot"
+    },
+    "L": {
+      "item": "minecraft:iron_bars"
+    },
+    "R": {
+      "item": "create:shaft"
+    },
+    "S": {
+      "item": "create:brass_block"
+    },
+    "G": {
+      "item": "create:industrial_iron_block"
+    }
+  },
+  "pattern": [
+    "R   R",
+    "SHHHS",
+    "GLLLG",
+    "GHHHG"
+  ],
+  "result": {
+    "item": "createbiomechanical:station"
+  }
+}
