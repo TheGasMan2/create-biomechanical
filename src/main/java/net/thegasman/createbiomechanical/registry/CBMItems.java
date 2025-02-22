@@ -17,6 +17,10 @@ public class CBMItems {
             .item("incomplete_electron_battery", Item::new)
             .register();
 
+    public static final ItemEntry<Item> STURDY_CIRCUIT = REGISTRATE
+            .item("sturdy_circuit", Item::new)
+            .register();
+
     public static void register() {
         CreateBiomechanical.LOGGER.info("Registering Items");
     }

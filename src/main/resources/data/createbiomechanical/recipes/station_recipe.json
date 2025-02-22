@@ -12,10 +12,10 @@
       "item": "create:shaft"
     },
     "S": {
-      "item": "create:precision_mechanism"
+      "item": "createbiomechanical:sturdy_circuit"
     },
     "G": {
-      "item": "create:industrial_iron_block"
+      "item": "minecraft:iron_block"
     }
   },
   "pattern": [

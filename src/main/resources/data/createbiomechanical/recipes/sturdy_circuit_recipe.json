@@ -1,0 +1,26 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "key": {
+    "H": {
+      "item": "create:sturdy_sheet"
+    },
+    "L": {
+      "item": "minecraft:redstone"
+    },
+    "R": {
+      "item": "create:polished_rose_quartz"
+    },
+    "S": {
+      "item": "create:brass_nugget"
+    }
+  },
+  "pattern": [
+    "  H  ",
+    "LLRLL",
+    " SSS "
+  ],
+  "result": {
+    "item": "createbiomechanical:sturdy_circuit"
+  }
+}
