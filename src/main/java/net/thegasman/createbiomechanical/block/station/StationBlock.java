@@ -16,15 +16,16 @@ import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.thegasman.createbiomechanical.registry.CBMBlockEntityTypes;
+import net.thegasman.createbiomechanical.registry.CBMBlocks;
 
 public class StationBlock extends HorizontalKineticBlock implements IBE<StationBlockEntity> {
 
-
+    //todo change center to be the front center where golem stands
     public static final EnumProperty<StationShape> SHAPE = EnumProperty.create("shape", StationShape.class);
 
     public StationBlock(Properties properties) {
         super(properties);
-        registerDefaultState(defaultBlockState().setValue(SHAPE, StationShape.BOTTOM_CENTER));
+        registerDefaultState(defaultBlockState().setValue(SHAPE, StationShape.CENTER));
     }
 
     @Override
@@ -52,7 +53,7 @@ public class StationBlock extends HorizontalKineticBlock implements IBE<StationB
     @Override
     public void onPlace(BlockState state, Level worldIn, BlockPos pos, BlockState oldState, boolean isMoving) {
         super.onPlace(state, worldIn, pos, oldState, isMoving);
-        if (state.getValue(SHAPE) != StationShape.BOTTOM_CENTER) {
+        if (state.getValue(SHAPE) != StationShape.CENTER) {
             return;
         }
         Direction front = state.getValue(HORIZONTAL_FACING);
@@ -60,24 +61,70 @@ public class StationBlock extends HorizontalKineticBlock implements IBE<StationB
         Direction right = state.getValue(HORIZONTAL_FACING).getCounterClockWise();
         BlockPos leftShaftPos = pos.relative(front).above().relative(left);
         BlockPos rightShaftPos = pos.relative(front).above().relative(right);
+        BlockPos frontLeftPos = pos.relative(front).relative(left);
+        BlockPos frontCenterPos = pos.relative(front);
+        BlockPos frontRightPos = pos.relative(front).relative(right);
+        BlockPos backLeftPos = pos.relative(left);
+        BlockPos backRightPos = pos.relative(right);
+        BlockPos topBackLeftPos = pos.above().relative(left);
+        BlockPos topBackRightPos = pos.above().relative(right);
+        BlockPos topCenterPos = pos.above();
+        //todo better way to do this, define and move these offsets to StationShape
         worldIn.setBlockAndUpdate(leftShaftPos, defaultBlockState().setValue(SHAPE, StationShape.TOP_FRONT_LEFT_SHAFT).setValue(HORIZONTAL_FACING, front));
+        withBlockEntityDo(worldIn, leftShaftPos, be -> be.setControllerPos(pos));
         worldIn.setBlockAndUpdate(rightShaftPos, defaultBlockState().setValue(SHAPE, StationShape.TOP_FRONT_RIGHT_SHAFT).setValue(HORIZONTAL_FACING, front));
+        withBlockEntityDo(worldIn, rightShaftPos, be -> be.setControllerPos(pos));
+        worldIn.setBlockAndUpdate(frontLeftPos, defaultBlockState().setValue(SHAPE, StationShape.BOTTOM_FRONT_LEFT).setValue(HORIZONTAL_FACING, front));
+        withBlockEntityDo(worldIn, frontLeftPos, be -> be.setControllerPos(pos));
+        worldIn.setBlockAndUpdate(frontCenterPos, defaultBlockState().setValue(SHAPE, StationShape.FRONT_CENTER).setValue(HORIZONTAL_FACING, front));
+        withBlockEntityDo(worldIn, frontCenterPos, be -> be.setControllerPos(pos));
+        worldIn.setBlockAndUpdate(frontRightPos, defaultBlockState().setValue(SHAPE, StationShape.BOTTOM_FRONT_RIGHT).setValue(HORIZONTAL_FACING, front));
+        withBlockEntityDo(worldIn, frontRightPos, be -> be.setControllerPos(pos));
+        worldIn.setBlockAndUpdate(backLeftPos, defaultBlockState().setValue(SHAPE, StationShape.BOTTOM_BACK_LEFT).setValue(HORIZONTAL_FACING, front));
+        withBlockEntityDo(worldIn, backLeftPos, be -> be.setControllerPos(pos));
+        worldIn.setBlockAndUpdate(backRightPos, defaultBlockState().setValue(SHAPE, StationShape.BOTTOM_BACK_RIGHT).setValue(HORIZONTAL_FACING, front));
+        withBlockEntityDo(worldIn, backRightPos, be -> be.setControllerPos(pos));
+        worldIn.setBlockAndUpdate(topBackLeftPos, defaultBlockState().setValue(SHAPE, StationShape.TOP_BACK_LEFT).setValue(HORIZONTAL_FACING, front));
+        withBlockEntityDo(worldIn, topBackLeftPos, be -> be.setControllerPos(pos));
+        worldIn.setBlockAndUpdate(topBackRightPos, defaultBlockState().setValue(SHAPE, StationShape.TOP_BACK_RIGHT).setValue(HORIZONTAL_FACING, front));
+        withBlockEntityDo(worldIn, topBackRightPos, be -> be.setControllerPos(pos));
+        worldIn.setBlockAndUpdate(topCenterPos, defaultBlockState().setValue(SHAPE, StationShape.TOP).setValue(HORIZONTAL_FACING, front));
+        withBlockEntityDo(worldIn, topCenterPos, be -> be.setControllerPos(pos));
     }
 
     @Override
     public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving) {
-        if (pState.getValue(SHAPE) != StationShape.BOTTOM_CENTER) {
+        if (pState.getValue(SHAPE) != StationShape.CENTER) {
+            withBlockEntityDo(pLevel, pPos, be -> be.removeMultiBlock());
             super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
             return;
         }
         Direction front = pState.getValue(HORIZONTAL_FACING);
         Direction left = pState.getValue(HORIZONTAL_FACING).getClockWise();
         Direction right = pState.getValue(HORIZONTAL_FACING).getCounterClockWise();
+        //todo better way to do this
         BlockPos leftShaftPos = pPos.relative(front).above().relative(left);
         BlockPos rightShaftPos = pPos.relative(front).above().relative(right);
-        pLevel.destroyBlock(leftShaftPos, false);
-        pLevel.destroyBlock(rightShaftPos, false);
+        BlockPos frontLeftPos = pPos.relative(front).relative(left);
+        BlockPos frontCenterPos = pPos.relative(front);
+        BlockPos frontRightPos = pPos.relative(front).relative(right);
+        BlockPos backLeftPos = pPos.relative(left);
+        BlockPos backRightPos = pPos.relative(right);
+        BlockPos topBackLeftPos = pPos.above().relative(left);
+        BlockPos topBackRightPos = pPos.above().relative(right);
+        BlockPos topCenterPos = pPos.above();
+        destroyStationBlock(pLevel, leftShaftPos, rightShaftPos, frontLeftPos, frontCenterPos,
+                frontRightPos, backLeftPos, backRightPos, topBackLeftPos, topBackRightPos, topCenterPos);
         super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
+
+    }
+
+    private static void destroyStationBlock(Level pLevel, BlockPos... pPos) {
+        for (BlockPos pos : pPos) {
+            if (pLevel.getBlockState(pos).is(CBMBlocks.STATION.get())) {
+                pLevel.destroyBlock(pos, false);
+            }
+        }
     }
 
     @Override
@@ -103,7 +150,7 @@ public class StationBlock extends HorizontalKineticBlock implements IBE<StationB
 
     @Override
     public RenderShape getRenderShape(BlockState pState) {
-        if (pState.getValue(SHAPE) == StationShape.BOTTOM_CENTER) {
+        if (pState.getValue(SHAPE) == StationShape.CENTER) {
             return RenderShape.MODEL;
         }
         return RenderShape.INVISIBLE;
