@@ -20,7 +20,6 @@ public class CBMCreativeModTabs {
                     .title(Component.translatable(CreateBiomechanical.MODID + ".creativetab.create_biomechanical_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(CBMItems.ELECTRON_BATTERY);
-                        pOutput.accept(CBMItems.INCOMPLETE_ELECTRON_BATTERY);
                         pOutput.accept(CBMItems.STURDY_CIRCUIT);
                         pOutput.accept(CBMBlocks.POWER_CORE);
                         pOutput.accept(CBMBlocks.STATION);

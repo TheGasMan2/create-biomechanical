@@ -6,13 +6,13 @@
       "item": "createbiomechanical:electron_battery"
     },
     "L": {
-      "item": "minecraft:iron_block"
+      "item": "createbiomechanical:sturdy_circuit"
     },
     "R": {
       "item": "minecraft:iron_bars"
     },
     "S": {
-      "item": "minecraft:copper_block"
+      "item": "create:brass_block"
     }
   },
   "pattern": [

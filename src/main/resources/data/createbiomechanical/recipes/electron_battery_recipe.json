@@ -3,7 +3,7 @@
   "ingredient": {
     "tag": "forge:plates/iron"
   },
-  "loops": 5,
+  "loops": 3,
   "results": [
     {
       "chance": 120.0,

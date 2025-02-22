@@ -112,6 +112,6 @@
     }
   },
   "textures": {
-    "particle": "createmechanisedmenagerie:block/power_core_particle"
+    "particle": "createbiomechanical:block/power_core_particle"
   }
 }
