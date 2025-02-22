@@ -25,7 +25,7 @@ public class CBMEntityTypes {
                                     .setRolls(ConstantValue.exactly(1.0F))
                                     .add(LootItem.lootTableItem(CBMBlocks.POWER_CORE.get()))
                     )))
-            .spawnEgg(0xba8459,0x7e7f73)
+            .spawnEgg(0x7e7f73,0xba8459)
             .tab(CBMCreativeModTabs.CREATE_MECHANISED_MENAGERIE_TAB.getKey())
             .build()
             .register();
