@@ -12,7 +12,7 @@
       "item": "create:shaft"
     },
     "S": {
-      "item": "createbiomechanical:sturdy_circuit"
+      "item": "create:sturdy_sheet"
     },
     "G": {
       "item": "minecraft:iron_block"
