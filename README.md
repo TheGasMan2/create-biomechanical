@@ -8,7 +8,7 @@ Future updates will expand functionality with new golems, station upgrades, and 
 Join the discord for more updates: https://discord.com/invite/Gz9SHZTGT7
 
 <p align="center"><img src="./.idea/icon.png" alt="Logo" width="200"></p>
-<h1 align="center">Create  <br>
+<h1 align="center">Create: Biomechanical  <br>
 	<a href="https://www.patreon.com/simibubi"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dsimibubi%26type%3Dpatrons&style=flat&label=Supporters&color=ff5733" alt="Patreon"></a>
 	<a href="https://www.curseforge.com/minecraft/mc-mods/create/files"><img src="https://cf.way2muchnoise.eu/versions/328085(c70039).svg" alt="Supported Versions"></a>
 	<a href="https://github.com/Creators-of-Create/Create/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Creators-of-Create/Create?style=flat&color=900c3f" alt="License"></a>
@@ -18,9 +18,8 @@ Join the discord for more updates: https://discord.com/invite/Gz9SHZTGT7
     <br><br>
 </h1>
 
-<p>Welcome to Create, a mod offering a variety of tools and blocks for Building, Decoration, and Aesthetic Automation.</p>
-<p>The added elements of tech are designed to leave as many design choices to the player as possible. With Create, the game isn't played inside a bunch of UIs, it challenges you to set up contraptions of animated components working together in many possible arrangements.</p>
-<p>Create's visual in-game documentation called 'Ponder' will guide you through all added mechanics and gadgets.</p>
+<p>Harness the fusion of machinery and life with Create: Biomechanical. Build and bring to life the Cogolem—a mechanical golem that serves various functions depending on its mode. Use the Cogolem Station to power up your Cogolem, enhance its abilities, and switch between modes to suit your needs. Whether you need a helper for transportation, construction, or defense, the Cogolem is an adaptable ally ready to work by your side.</p>
+<p>Future updates will expand functionality with new golems, station upgrades, and more biomechanical creations to revolutionize your Create mod experience!</p>
 <p>&nbsp;</p>
 <p align="center"><a href="https://github.com/Creators-of-Create/Create/issues"><img src="https://i.imgur.com/qPmjSXy.png" width="160" /></a> <a href="https://www.youtube.com/channel/UCrKV2QTuyGcv4E3eSJpBiYA/playlists"><img src="https://i.imgur.com/L1bU9mr.png" width="160" /></a><a href="https://discord.gg/hmaD7Se"><img src="https://i.imgur.com/uf6V9ZX.png" width="160" /></a> <a href="https://github.com/Creators-of-Create/Create/wiki/Supporting-the-Project"><img src="https://i.imgur.com/fHQ45KR.png" width="227" /></a></p>
 
