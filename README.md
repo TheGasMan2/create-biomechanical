@@ -1,4 +1,4 @@
-
+<p align="center"><img src="./.idea/icon.png" alt="Logo" width="200"></p>
 <h1 align="center">Create: Biomechanical  <br>
 	<a href="https://www.curseforge.com/minecraft/mc-mods/create-biomechanical/files"><img src="https://img.shields.io/badge/Availible_for-1.20.1-darkred" alt="Supported Versions"></a>
 	<a href="https://github.com/TheGasMan2/create-biomechanical/blob/main/LICENCE"><img src="https://img.shields.io/github/license/Creators-of-Create/Create?style=flat&color=900c3f" alt="License"></a>
