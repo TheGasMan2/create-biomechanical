@@ -112,6 +112,7 @@
     }
   },
   "textures": {
+    "0": "createbiomechanical:block/power_core",
     "particle": "createbiomechanical:block/power_core_particle"
   }
 }
